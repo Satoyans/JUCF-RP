@@ -81,7 +81,7 @@
 			}
 		]
 	},
-	"custom_element_visible_control": {
+	"element_visible_control": {
 		//要素のvisibleのバインディング
 		"$field_index": 1,
 		"$trigger_text|default": "text",
@@ -135,14 +135,14 @@
 			}
 		]
 	},
-	"custom_button_visible_control@custom_form.custom_element_visible_control": {
+	"button_visible_control@custom_form.element_visible_control": {
 		"controls": [
 			{
-				"button@custom_button.light_text_button_copy": {
-					"$default_button_texture": "textures/blocks/concrete_white",
-					"$hover_button_texture": "textures/blocks/concrete_white",
-					"$pressed_button_texture": "textures/blocks/concrete_white",
-					"$locked_button_texture": "textures/blocks/concrete_white",
+				"button@common_buttons.light_text_button": {
+					"$default_button_texture": "",
+					"$hover_button_texture": "",
+					"$pressed_button_texture": "",
+					"$locked_button_texture": "",
 					"layer": 0,
 					"$light_border_hover_color": [255, 255, 255],
 					"$pressed_button_name": "button.form_button_click",
@@ -162,14 +162,43 @@
 			}
 		]
 	},
-	"close_button_visible_control@custom_form.custom_element_visible_control": {
+	"hover_text_visible_control@custom_form.element_visible_control": {
+		"controls": [
+			{
+				"button@custom_button.light_text_button_copy": {
+					//自作のボタン
+					"$default_button_texture": "",
+					"$hover_button_texture": "",
+					"$pressed_button_texture": "",
+					"$locked_button_texture": "",
+					"layer": 0,
+					"$light_border_hover_color": [255, 255, 255],
+					"$pressed_button_name": "", //クリック時のボタン削除
+					"$border_visible": false, //ボタン非表示
+					"anchor_from": "center",
+					"anchor_to": "center",
+					"$button_text": "",
+					"$button_text_binding_type": "collection",
+					"$button_text_grid_collection_name": "form_buttons",
+					"$button_text_max_size": ["100%", 20],
+					"bindings": [
+						{
+							"binding_type": "collection_details",
+							"binding_collection_name": "form_buttons"
+						}
+					]
+				}
+			}
+		]
+	},
+	"close_button_visible_control@custom_form.element_visible_control": {
 		"controls": [
 			{
 				"close_button@common.close_button": {}
 			}
 		]
 	},
-	"custom_button_property_bag_control": {
+	"property_bag_control": {
 		//多分座標？
 		"$field_index": 4,
 		"type": "panel",
@@ -292,7 +321,7 @@
 		"layer": 1,
 		"controls": [
 			{
-				"main_ui@custom_button_property_bag_control": {
+				"main_ui@property_bag_control": {
 					//"type": "label",
 					//"text": "#show_text",
 					"type": "panel",
@@ -303,7 +332,7 @@
 
 					"controls": [
 						{
-							"text_panel@custom_form.custom_element_visible_control": {
+							"text_panel@custom_form.element_visible_control": {
 								"$trigger_text": "text",
 								"size": "fill",
 								"controls": [
@@ -322,7 +351,7 @@
 							}
 						},
 						{
-							"image_panel@custom_form.custom_element_visible_control": {
+							"image_panel@custom_form.element_visible_control": {
 								"$trigger_text": "image",
 								"size": "fill",
 								"controls": [
@@ -362,7 +391,13 @@
 							}
 						},
 						{
-							"button_panel@custom_button_visible_control": {
+							"hover_text_panel@hover_text_visible_control": {
+								"$trigger_text": "hover",
+								"size": "fill"
+							}
+						},
+						{
+							"button_panel@button_visible_control": {
 								"$trigger_text": "button",
 								"size": "fill"
 							}
