@@ -1,0 +1,89 @@
+{
+	"namespace": "server_form",
+
+	"long_form": {
+		"type": "panel",
+		"size": ["100%", "100%"],
+		"controls": [
+			//ノーマル
+			{
+				"long_form_normal@common_dialogs.main_panel_no_buttons": {
+					"$title_panel": "common_dialogs.standard_title_label",
+					"$title_size": ["100% - 14px", 10],
+					"size": [225, 200],
+					"$text_name": "#title_text",
+					"$title_text_binding_type": "none",
+					"$child_control": "server_form.long_form_panel",
+					"layer": 2,
+					"bindings": [
+						{
+							"binding_name": "#title_text",
+							"binding_name_override": "#t"
+						},
+						{
+							"binding_type": "view",
+							"source_property_name": "(';' + #t = (';' + #t - $custom_form_trigger_text))",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			},
+			//カスタム
+			{
+				"long_form_custom@common_dialogs.main_panel_no_buttons": {
+					"size": "$custom_form_screen_size",
+					"layer": 2,
+					"bindings": [
+						{
+							"binding_name": "#title_text",
+							"binding_name_override": "#t"
+						},
+						{
+							"binding_type": "view",
+							"source_property_name": "(not (';' + #t = (';' + #t - $custom_form_trigger_text)))",
+							"target_property_name": "#visible"
+						}
+					],
+					"controls": [
+						{
+							"panel_indent": {
+								"type": "panel",
+								"size": "$panel_indent_size",
+								"offset": [0, 23],
+								"anchor_from": "top_middle",
+								"anchor_to": "top_middle",
+								"controls": [{ "inside_header_panel@custom_form.custom_panel": {} }]
+							}
+						}
+					]
+				}
+			}
+		]
+	},
+
+	"standard_title_label@title_data_control": {
+		"$field_index": 1,
+		"type": "label",
+		"size": ["default", 10],
+		"color": "$title_text_color",
+		"text": "#title_string",
+		"layer": 4,
+		"shadow": false
+	},
+
+	"title_data_control": {
+		"$field_index|default": 1,
+		"type": "panel",
+		"bindings": [
+			{
+				"binding_name": "#title_text",
+				"binding_name_override": "#base_string"
+			},
+			{
+				"binding_type": "view",
+				"source_property_name": "('§z' + #base_string - $custom_form_trigger_text)",
+				"target_property_name": "#title_string"
+			}
+		]
+	}
+}
