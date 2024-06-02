@@ -138,14 +138,15 @@
 	"button_visible_control@custom_form.element_visible_control": {
 		"controls": [
 			{
-				"button@common_buttons.light_text_button": {
+				"button@custom_button.light_text_button_copy": {
+					//自作のボタン
 					"$default_button_texture": "",
 					"$hover_button_texture": "",
 					"$pressed_button_texture": "",
 					"$locked_button_texture": "",
 					"layer": 0,
 					"$light_border_hover_color": [255, 255, 255],
-					"$pressed_button_name": "button.form_button_click",
+					"$pressed_button_name": "button.form_button_click", //クリック時のボタンはそのまま
 					"anchor_from": "center",
 					"anchor_to": "center",
 					"$button_text": "",
@@ -162,7 +163,9 @@
 			}
 		]
 	},
-	"hover_text_visible_control@custom_form.element_visible_control": {
+	// "hover_text_visible_control@custom_form.element_visible_control": {
+	"hover_text_visible_control": {
+		"type": "panel",
 		"controls": [
 			{
 				"button@custom_button.light_text_button_copy": {
@@ -174,7 +177,7 @@
 					"layer": 0,
 					"$light_border_hover_color": [255, 255, 255],
 					"$pressed_button_name": "", //クリック時のボタン削除
-					"$border_visible": false, //ボタン非表示
+					"$border_visible": false, //ボーダー非表示
 					"anchor_from": "center",
 					"anchor_to": "center",
 					"$button_text": "",
@@ -392,7 +395,6 @@
 						},
 						{
 							"hover_text_panel@hover_text_visible_control": {
-								"$trigger_text": "hover",
 								"size": "fill"
 							}
 						},
