@@ -1,8 +1,11 @@
 {
 	"format_version": 2,
+	"metadata": {
+		"authors": ["satoyan(Discord@satoyan_)"]
+	},
 	"header": {
-		"name": "JsonUI_custom_formRP実験用",
-		"description": "実験用",
+		"name": "JUCF-RP",
+		"description": "",
 		"min_engine_version": [1, 20, 80],
 		"uuid": "8d502ddf-dc2d-47a6-aa47-17794a6b1903",
 		"version": [1, 0, 1]
@@ -13,6 +16,5 @@
 			"uuid": "bd2907ab-65c8-4f6c-a4cd-afbb715b57eb",
 			"version": [1, 0, 0]
 		}
-	],
-	"dependencies": [{ "uuid": "b70a87da-8496-48da-8b2a-02596eed285e", "version": [1, 0, 0] }]
+	]
 }
