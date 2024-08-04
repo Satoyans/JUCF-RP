@@ -78,6 +78,11 @@
 				"binding_type": "view",
 				"source_property_name": "#text_string",
 				"target_property_name": "#hover_text"
+			},
+			{
+				"binding_type": "view",
+				"source_property_name": "#text_string",
+				"target_property_name": "#item_id_aux"
 			}
 		]
 	},
@@ -409,6 +414,21 @@
 							"close_button_panel@close_button_visible_control": {
 								"$trigger_text": "close",
 								"size": "fill"
+							}
+						},
+						{
+							"inventory_item_renderer_panel@custom_form.element_visible_control": {
+								"$trigger_text": "item",
+								"size": "fill",
+								"controls": [
+									{
+										"item_renderer@custom_form.custom_button_data_control": {
+											"$field_index": 5,
+											"type": "custom",
+											"renderer": "inventory_item_renderer"
+										}
+									}
+								]
 							}
 						}
 					]
