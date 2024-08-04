@@ -350,7 +350,7 @@
 											"type": "label",
 											"text": "#text_string",
 											"localize": true,
-											"layer": 11,
+											"layer": 12,
 											"color": [255, 255, 255],
 											"anchor_from": "center",
 											"anchor_to": "center"
@@ -424,6 +424,7 @@
 									{
 										"item_renderer@custom_form.custom_button_data_control": {
 											"$field_index": 5,
+											"layer": 11,
 											"type": "custom",
 											"renderer": "inventory_item_renderer"
 										}
