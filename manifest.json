@@ -7,13 +7,13 @@
 		"name": "JUCF-RP",
 		"description": "",
 		"min_engine_version": [1, 20, 80],
-		"uuid": "8d502ddf-dc2d-47a6-aa47-17794a6b1903",
-		"version": [1, 0, 1]
+		"uuid": "2ba46d09-ef5e-4d55-b45a-a7cb5305b956",
+		"version": [1, 1, 0]
 	},
 	"modules": [
 		{
 			"type": "resources",
-			"uuid": "bd2907ab-65c8-4f6c-a4cd-afbb715b57eb",
+			"uuid": "f98160e4-dd89-4926-acae-dd995199fc71",
 			"version": [1, 0, 0]
 		}
 	]
