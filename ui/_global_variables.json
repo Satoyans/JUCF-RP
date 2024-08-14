@@ -1,6 +1,6 @@
 {
 	"$custom_form_screen_size": [465, 262],
 	"$custom_form_trigger_text": "§c§u§s§t§o§m§f§o§r§m",
-	"$is_eliminate_form_animation": "true",
-	"$is_show_item_id_aux": "false"
+	"$is_eliminate_form_animation": true,
+	"$is_show_item_id_aux": false
 }

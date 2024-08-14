@@ -90,7 +90,7 @@
 	"third_party_server_screen@common.base_screen": {
 		"variables": [
 			{
-				"requires": "($is_eliminate_form_animation = 'true')",
+				"requires": "$is_eliminate_form_animation",
 				"$screen_animations": ["@server_form.exit_wait"],
 				"$background_animations": ["@server_form.exit_wait"]
 			}
